@@ -9,12 +9,12 @@ default program.
 The project is built using `pygame` since python has excellent libraries
 such as `pathlib` for dealing with paths
 
-**This project is meant mostly as a joke**
+**This project is meant mostly as a joke.**
 
 ## Development instructions
 Following the below instuctions to get the project up and running
 for development:
-1. Clone repository: https://github.com/christofferaakre/find-that-file.git
+1. Clone repository: `git clone https://github.com/christofferaakre/find-that-file.git`
 2. `cd` into the directory: `cd find-that-file`
 3. Install python dependencies: `pip install -r requirements.txt`
 4. Run the `main.py` file: `python3 main.py`
