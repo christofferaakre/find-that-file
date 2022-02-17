@@ -6,6 +6,8 @@ When your character collides with a directory, you enter that directory.
 When your character collides with a file, that file is opened in your
 default program.
 
+You move the character by using the WASD keys.
+
 The project is built using `pygame` since python has excellent libraries
 such as `pathlib` for dealing with paths
 
