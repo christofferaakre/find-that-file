@@ -21,7 +21,6 @@ class Player(pygame.sprite.Sprite):
         self.move_direction: vec = vec(0,0)
         self.sprite_group: Group = Group()
 
-
     def move(self):
         # friction
         self.acceleration = self.move_direction * ACC
@@ -33,3 +32,11 @@ class Player(pygame.sprite.Sprite):
         self.rect.center = self.position
         self.acceleration = vec(0,0)
         self.move_direction = vec(0,0)
+
+    def collide(self, sprite_group: Group):
+        hits: Group = pygame.sprite.spritecollide(self, sprite_group, dokill=False)
+        hit = None
+        if hits:
+            hit = hits[0]
+            print(hit.name)
+

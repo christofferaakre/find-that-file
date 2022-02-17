@@ -86,6 +86,7 @@ while True:
 
     InputManager.handle_input()
     player.move()
+    player.collide(blocks)
 
     pygame.display.update()
     clock.tick(FPS)
