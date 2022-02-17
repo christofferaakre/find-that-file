@@ -33,10 +33,10 @@ class Player(pygame.sprite.Sprite):
         self.acceleration = vec(0,0)
         self.move_direction = vec(0,0)
 
-    def collide(self, sprite_group: Group):
+    def collide(self, sprite_group: Group, game):
         hits: Group = pygame.sprite.spritecollide(self, sprite_group, dokill=False)
         hit = None
         if hits:
             hit = hits[0]
-            print(hit.name)
+            hit.interact(game)
 
