@@ -1,5 +1,5 @@
 # find-that-file
-<video src='demo.mkv'>
+<video src='demo.mkv'></video>
 `find-that-file` is a GUI ~~Graphical User Interface~~
 Game User Interface file explorer that requires you to control
 a character in order to navigate your file system's files and directories.
