@@ -4,6 +4,7 @@ import pygame.locals
 from constants import *
 from Player import Player
 
+
 class InputManager():
     player: Player
     @classmethod

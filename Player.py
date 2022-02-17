@@ -1,13 +1,17 @@
+from typing import List, Tuple
 import pygame
+from pygame.sprite import Group, Sprite
 
 from constants import *
+
+from utils import rect_displacement
 
 class Player(pygame.sprite.Sprite):
     def __init__(self, position: vec):
         super().__init__()
 
         self.surf = pygame.Surface((30, 30))
-        self.surf.fill((128, 255, 40))
+        self.surf.fill(PLAYER_COLOR)
         self.rect = self.surf.get_rect(center=position)
 
         self.position: vec = position
@@ -15,6 +19,8 @@ class Player(pygame.sprite.Sprite):
         self.acceleration: vec = vec(0,0)
 
         self.move_direction: vec = vec(0,0)
+        self.sprite_group: Group = Group()
+
 
     def move(self):
         # friction
