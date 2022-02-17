@@ -4,8 +4,6 @@ from pygame.sprite import Group, Sprite
 
 from constants import *
 
-from utils import rect_displacement
-
 class Player(pygame.sprite.Sprite):
     def __init__(self, position: vec):
         super().__init__()

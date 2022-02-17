@@ -26,7 +26,7 @@ pygame.display.set_caption("GUI File Explorer")
 
 font = pygame.font.SysFont('Arial', 12)
 
-game.directory = pathlib.Path(os.path.expanduser('~/coding'))
+game.directory = pathlib.Path(os.path.expanduser('~'))
 game.generate_blocks()
 
 while True:

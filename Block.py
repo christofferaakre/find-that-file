@@ -1,6 +1,10 @@
 import pygame
 from constants import *
+
+import sys
 import pathlib
+
+from utils import open_file
 
 class Block(pygame.sprite.Sprite):
     def __init__(self, position: vec, name: str):
@@ -27,3 +31,8 @@ class File(Block):
     def __init__(self, position: vec, name: str):
         super().__init__(position, name)
         self.color = FILE_COLOR
+
+    def interact(self, game):
+        path = game.directory / self.name
+        open_file(path)
+        sys.exit()

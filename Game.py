@@ -41,9 +41,9 @@ class Game():
             print(f"col: {col}, row: {row}, position: {position}")
             block = None
             if file.is_dir():
-                block = Directory(position, name=file.stem)
+                block = Directory(position, name=file.name)
             else:
-                block = File(position, name=file.stem)
+                block = File(position, name=file.name)
 
             self.sprites.add(block)
             self.blocks.add(block)
