@@ -42,7 +42,10 @@ while True:
         display.blit(sprite.surf, game.camera.apply(sprite.rect))
 
     for block in game.blocks:
-        text = font.render(block.name, True, block.color)
+        string = block.name
+        if len(string) > MAX_FILENAME_LENGTH:
+            string = block.name[0:MAX_FILENAME_LENGTH - 2] + '...'
+        text = font.render(string, True, block.color)
         text_rect = game.camera.apply(text.get_rect(center=block.rect.center))
         display.blit(text, text_rect)
 

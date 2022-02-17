@@ -17,26 +17,23 @@ class Game():
         all_files = list(self.directory.glob('*'))
         files = list(filter(lambda x: not x.stem.startswith('.'), all_files))
 
-        n_cols = math.ceil(math.sqrt(len(files)))
-
+        n_cols= math.floor(math.sqrt(len(files)))
         col = 0
         row = 0
 
         self.sprites = pygame.sprite.Group()
         self.blocks = pygame.sprite.Group()
 
-        space_used = WIDTH / n_cols * (n_cols -1) + BLOCK_WIDTH
-        free_space = WIDTH - space_used
-        x_padding = free_space / 2
-        y_margin = 100
+        x_padding = BLOCK_WIDTH / 2
+        margin = 75
 
         for file in files:
             if col == n_cols:
                 col = 0
                 row += 1
 
-            x = WIDTH / n_cols * col + BLOCK_WIDTH / 2 + x_padding
-            y = -row * (BLOCK_HEIGHT + y_margin) - BLOCK_HEIGHT / 2
+            x = x_padding + col * (BLOCK_WIDTH + margin)
+            y = -row * (BLOCK_HEIGHT + margin) - BLOCK_HEIGHT / 2
             position = vec(x,y)
             print(f"col: {col}, row: {row}, position: {position}")
             block = None

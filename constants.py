@@ -2,6 +2,8 @@ import pygame
 
 vec = pygame.math.Vector2
 
+MAX_FILENAME_LENGTH = 10
+
 BLACK = (0, 0, 0)
 GREY = (38, 37, 37)
 WHITE = (255, 255, 25)
