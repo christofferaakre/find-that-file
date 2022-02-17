@@ -11,5 +11,10 @@ such as `pathlib` for dealing with paths
 
 **This project is meant mostly as a joke**
 
-## Build instructions
-1. Clone repository:
+## Development instructions
+Following the below instuctions to get the project up and running
+for development:
+1. Clone repository: https://github.com/christofferaakre/find-that-file.git
+2. `cd` into the directory: `cd find-that-file`
+3. Install python dependencies: `pip install -r requirements.txt`
+4. Run the `main.py` file: `python3 main.py`
