@@ -1,5 +1,6 @@
 # find-that-file
-<video src='demo.mkv'></video>
+https://user-images.githubusercontent.com/31142852/154470378-ef7f14ba-66f6-4da9-b41d-149faec35409.mp4
+
 `find-that-file` is a GUI ~~Graphical User Interface~~
 Game User Interface file explorer that requires you to control
 a character in order to navigate your file system's files and directories.
@@ -21,3 +22,7 @@ for development:
 2. `cd` into the directory: `cd find-that-file`
 3. Install python dependencies: `pip install -r requirements.txt`
 4. Run the `main.py` file: `python3 main.py`
+
+
+
+
