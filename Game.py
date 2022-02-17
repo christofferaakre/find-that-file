@@ -6,7 +6,7 @@ from pathlib import Path
 import math
 
 from Player import Player
-from Block import Directory, File
+from Block import Back, Directory, File
 from InputManager import InputManager
 from Camera import Camera
 
@@ -46,6 +46,10 @@ class Game():
             self.blocks.add(block)
             col += 1
 
+        back_position = vec(WIDTH/2, BLOCK_HEIGHT + BLOCK_HEIGHT + 100)
+        back = Back(position=back_position)
+        self.sprites.add(back)
+        self.blocks.add(back)
 
         self.player = Player(vec(WIDTH/2, BLOCK_HEIGHT * 2))
         InputManager.player = self.player

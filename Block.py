@@ -25,7 +25,16 @@ class Directory(Block):
     def interact(self, game):
         game.directory = game.directory / self.name
         game.generate_blocks()
-        pass
+
+class Back(Block):
+    def __init__(self, position: vec):
+        super().__init__(position, name='..')
+        self.color = DIRECTORY_COLOR
+
+    def interact(self, game):
+        game.directory = game.directory.parents[0]
+        game.generate_blocks()
+
 
 class File(Block):
     def __init__(self, position: vec, name: str):
