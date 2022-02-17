@@ -35,7 +35,6 @@ class Game():
             x = x_padding + col * (BLOCK_WIDTH + margin)
             y = -row * (BLOCK_HEIGHT + margin) - BLOCK_HEIGHT / 2
             position = vec(x,y)
-            print(f"col: {col}, row: {row}, position: {position}")
             block = None
             if file.is_dir():
                 block = Directory(position, name=file.name)
